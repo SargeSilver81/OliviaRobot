@@ -8,7 +8,7 @@ import tty
 import termios
 
 # Set any aliases
-rr = RRB3(9.0, 6.0) # (battery, motor)
+rr = RRB3(9.0, 3.0) # (battery, motor)
 
 # Commands
 UP = 0
