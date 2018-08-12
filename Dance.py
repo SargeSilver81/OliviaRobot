@@ -16,6 +16,12 @@ DOWN = 1
 RIGHT = 2
 LEFT = 3
 
+# Set Default Exit Massage or Instructions
+print("Use the arrow keys to control the robot ")
+print("Press CTRL-c to quit the program")
+
+# The Code goes below here
+
 # These functions allow the program to read your keyboard
 def readchar():
     fd = sys.stdin.fileno()
@@ -40,7 +46,26 @@ def readkey(getchar_fn=None):
     c3 = getchar()
     return ord(c3) - 65  # 0=Up, 1=Down, 2=Right, 3=Left arrows
 
-# Set Default Exit Massage or Instructions
-print("Press CTRL-c to quit the program")
-
-# The Code goes below here
+# This will control the robot 
+try:
+    while True:
+        poppy = readkey()
+        if poppy == UP:
+            rr.forward(5)
+            print 'forward'
+        elif poppy == DOWN:
+            rr.reverse(5)
+            print 'reverse'
+        elif poppy == RIGHT:
+            rr.right(2)
+            print 'right'
+        elif poppy == LEFT:
+            rr.Left(2)
+            print 'left'
+        elif poppy == ' ':
+            rr.stop()
+            print 'stop'
+        elif ord(poppy) == 3:
+            break
+except KeyboardInterrupt:
+    GPIO.cleanup()
