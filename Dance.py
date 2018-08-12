@@ -51,16 +51,16 @@ try:
     while True:
         poppy = readkey()
         if poppy == UP:
-            rr.forward(5)
+            rr.forward(2)
             print 'forward'
         elif poppy == DOWN:
-            rr.reverse(5)
+            rr.reverse(2)
             print 'reverse'
         elif poppy == RIGHT:
             rr.right(2)
             print 'right'
         elif poppy == LEFT:
-            rr.Left(2)
+            rr.left(2)
             print 'left'
         elif poppy == ' ':
             rr.stop()
