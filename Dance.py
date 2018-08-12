@@ -57,10 +57,10 @@ try:
             rr.reverse(2)
             print 'reverse'
         elif poppy == RIGHT:
-            rr.right(2)
+            rr.right(1)
             print 'right'
         elif poppy == LEFT:
-            rr.left(2)
+            rr.left(1)
             print 'left'
         elif poppy == ' ':
             rr.stop()
